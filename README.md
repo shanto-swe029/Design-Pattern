@@ -97,9 +97,26 @@ Each pattern in the catalog has its own unique purpose and usage, addressing spe
 
 Now we will dive into the design patterns one by one. Let's start with **Creational Design Patterns**.
 
+
+
 ## Creational Design Patterns
 
+<details>
+	<summary> toggle view/hide </summary>
 
+Creational design patterns focus on object creation mechanisms, providing solutions to create objects in a flexible and reusable manner. They aim to decouple object creation from the client code, promoting loose coupling and enhancing the maintainability and extensibility of the codebase. 
+Here's an introduction to some common creational design patterns:
+
+1. **Singleton Pattern:** <br> The Singleton pattern ensures that only one instance of a class is created and provides a global point of access to it. It is useful when you want to limit the number of instances of a class and ensure that all clients use the same instance.
+2. **Factory Method Pattern:** <br> The Factory Method pattern defines an interface for creating objects but allows subclasses to decide which class to instantiate. It provides a way to delegate the object creation to subclasses, promoting extensibility and encapsulating object creation logic.
+3. **Abstract Factory Pattern:** <br> The Abstract Factory pattern provides an interface for creating families of related or dependent objects. It allows the creation of object families without specifying their concrete classes. This pattern is useful when you need to create a set of related objects that should be compatible or work together.
+4. **Builder Pattern:** <br> The Builder pattern separates the construction of complex objects from their representation, allowing the same construction process to create different representations. It provides a step-by-step approach to building objects, enabling the creation of complex objects with varying configurations.
+5. **Prototype Pattern:** <br> The Prototype pattern creates new objects by cloning existing ones, rather than relying on expensive creation mechanisms. It allows you to create new objects by copying existing instances and modifying them as needed. This pattern is useful when the creation of objects is costly or complex.
+6. **Object Pool Pattern:** <br> The Object Pool pattern manages a pool of reusable objects, providing efficient object reuse and minimizing the overhead of object creation and destruction. It is beneficial when creating and destroying objects is resource-intensive, and object reuse can significantly improve performance.
+
+These creational design patterns address various object creation scenarios and provide flexible and reusable solutions. Each pattern has its own intent, advantages, and use cases. Understanding these patterns allows you to choose the appropriate approach for object creation in your software projects, promoting code reuse, maintainability, and flexibility.
+
+</details>
 
 
 
