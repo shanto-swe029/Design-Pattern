@@ -121,6 +121,10 @@ Remember that studying design patterns is an ongoing process. Regularly revisit 
 
 </details>
 
+
+---
+
+
 Now we will dive into the design patterns one by one. Let's start with **Creational Design Patterns**.
 
 ## Creational Design Patterns
