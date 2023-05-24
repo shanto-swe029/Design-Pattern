@@ -18,7 +18,7 @@ To effectively learn and understand design patterns, it's helpful to have a soli
 
 Remember that learning design patterns is an ongoing process that improves with practice and practical application. Start with simpler patterns and gradually progress to more complex ones. Gain hands-on experience by implementing patterns in your projects to reinforce your understanding.
 
-	</details>
+</details>
 
 ## What is and why design pattern in software engineering?
 
@@ -34,7 +34,8 @@ Design patterns are categorized into several types, including creational pattern
 Some commonly known design patterns include the Singleton pattern, Factory Method pattern, Observer pattern, Decorator pattern, and many more. Each pattern has its specific intent, structure, and implementation details.
 
 By understanding and applying design patterns, software developers can create more robust, flexible, and maintainable software systems. Design patterns are not strict rules or algorithms but rather guidelines that help solve common design problems and promote good software engineering practices.
-	</details>
+
+</details>
 
 **External Resources:**
 - [Refactoring Guru: What's a design pattern?](https://refactoring.guru/design-patterns/what-is-pattern)
