@@ -94,10 +94,34 @@ Each pattern in the catalog has its own unique purpose and usage, addressing spe
 **External Resources:**
 - [Refactoring Guru: The Catalog of Design Patterns](https://refactoring.guru/design-patterns/catalog)
 
+## Before You Proceed
+
+<details>
+	<summary> toggle view/hide </summary>
+
+Each design pattern has 3 parts:
+1. **Intent:** <br> What does it do?
+2. **Problem it solves:** <br> Which problems will we have to face if we don't follow?
+3. **Context:** <br> In which situation we have to use this pattern?
+
+Studying a design pattern involves gaining a comprehensive understanding of its concepts, principles, and usage. Here are some steps to effectively study a design pattern:
+
+1. **Read about the Pattern:** <br> Understand the intent, problem it solves, and the context in which it is applicable.
+2. **Study the Structure and Participants:** <br> Analyze the structure of the pattern, including the participating classes, their relationships, and responsibilities. Identify the key components and how they interact with each other.
+3. **Learn the UML Diagram:** <br> Familiarize yourself with the UML diagram associated with the pattern. Understand the symbols, notations, and relationships depicted in the diagram. It helps visualize the pattern's structure and aids in communication and documentation.
+4. **Explore Use Cases:** <br> Study real-world use cases where the design pattern is commonly applied. Understand the scenarios in which the pattern provides benefits and solves specific design problems. This helps you connect the pattern with practical applications.
+5. **Review Code Examples:** <br> Look for code examples and implementations of the pattern. Analyze how the pattern is implemented in different programming languages and frameworks. Examine the code structure, class interactions, and the pattern-specific code snippets.
+6. **Understand Advantages and Trade-offs:** <br> Gain insights into the advantages and trade-offs of using the pattern. Understand the benefits it provides, such as improved code flexibility, extensibility, or maintainability. Also, be aware of any limitations or potential downsides associated with the pattern.
+7. **Implement the Pattern:** <br> Gain hands-on experience by implementing the pattern in your own code. Apply the pattern to solve a problem or improve the design of an existing system. Implementing the pattern in practice solidifies your understanding and helps you identify its practical implications.
+8. **Study Related Patterns:** <br> Explore related patterns that are connected or build upon the pattern you are studying. Understand the relationships between patterns and how they complement each other in solving different design challenges.
+9. **Review Design Principles:** <br> Relate the design pattern to relevant design principles such as SOLID principles, DRY (Don't Repeat Yourself), and Separation of Concerns. Understand how the pattern aligns with these principles and supports good software design practices.
+10. **Practice and Apply:** <br> Continuously practice and apply the pattern in different contexts and projects. As you gain more experience, you'll develop a deeper understanding of the pattern's nuances, variations, and adaptability to different scenarios.
+
+Remember that studying design patterns is an ongoing process. Regularly revisit patterns, review code examples, and explore new use cases to enhance your understanding. By building a solid foundation in design patterns, you'll be better equipped to leverage them effectively in your software development projects.
+
+</details>
 
 Now we will dive into the design patterns one by one. Let's start with **Creational Design Patterns**.
-
-
 
 ## Creational Design Patterns
 
