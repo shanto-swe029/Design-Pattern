@@ -122,6 +122,29 @@ Remember that studying design patterns is an ongoing process. Regularly revisit 
 </details>
 
 
+
+## The S.O.L.I.D Principles
+
+<details>
+	<summary> Overview </summary>
+
+The **SOLID Principles** are five principles of Object-Oriented class design. They are a set of rules and best practices to follow while designing a class structure.
+
+<figure>
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220910005416/SingleResponsibility2.png"
+         alt="SOLID Principles">
+</figure>
+
+</details>
+
+<details>
+	<summary> External Links </summary>
+
+- [Note of Abraar: S.O.L.I.D Principles](https://flying-swordtail-ac1.notion.site/S-O-L-I-D-Principles-0565ab7c568942579a0de7c9e2c19e08)
+- [FreeCodeCamp.org: The SOLID Principles of Object-Oriented Programming](https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)
+
+</details>
+
 ---
 
 
