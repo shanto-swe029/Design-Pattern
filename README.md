@@ -265,6 +265,133 @@ The Singleton pattern is a powerful tool but should be used judiciously. Overusi
 
 
 
+### Prototype Pattern - A Creational Design Pattern
+
+<details>
+	<summary> Overview </summary>
+
+The Prototype pattern is a creational design pattern that allows you to create copies of objects without coupling your code to their concrete classes. It provides a mechanism for creating new objects by copying an existing object, known as the prototype, and modifying it as needed. This pattern promotes flexibility and reusability by abstracting the process of object creation.
+
+</details>
+
+<details>
+	<summary> Intent </summary>
+
+The intent of the Prototype pattern is to enable the creation of new objects by cloning existing objects, thus avoiding the need for explicit instantiation and reducing the dependency on specific classes.
+
+</details>
+
+<details>
+	<summary> Key Components </summary>
+
+1. **Prototype:** <br> Defines the interface for cloning itself.
+2. **Concrete Prototype:** <br> Implements the cloning interface and provides the cloning behavior.
+3. **Client:** <br> Requests the cloning operation and works with the cloned objects.
+
+</details>
+
+<details>
+	<summary> UML Diagram </summary>
+
+<figure>
+    <img src="https://refactoring.guru/images/patterns/diagrams/prototype/structure-indexed.png"
+         alt="UML Diagram, Prototype Pattern">
+    <figcaption>UML Diagram: Prototype Pattern</figcaption>
+</figure>
+
+</details>
+
+
+<details>
+	<summary> Use Cases </summary>
+
+The Singleton pattern is useful in situations where we need to ensure that there is only one instance of a class and that instance needs to be globally accessible. Here are some common use cases where the Singleton pattern can be applied:
+
+1. **Object Creation Cost Reduction:** <br> When creating objects is an expensive operation in terms of time, resources, or complex initialization, the Prototype pattern allows you to create new instances by cloning existing objects. This approach avoids the overhead of costly object creation processes, such as querying a database, making network calls, or performing complex calculations.
+2. **Flexibility and Customization:** <br> The Prototype pattern allows you to create new objects with slight variations or customization while reusing existing object structures. By cloning a prototype and modifying its properties, you can tailor the new object to specific requirements without the need to create a new class or write complex initialization logic.
+3. **Immutable Objects:** <br> If you have immutable objects, meaning objects whose state cannot be modified once created, the Prototype pattern is useful for creating new instances with different initial values. Instead of creating separate immutable classes for each variation, you can clone an existing object and adjust the required properties.
+4. **Prototype Registry or Factory:** <br> The Prototype pattern can be used to implement a prototype registry or factory. Instead of relying on traditional factory methods, you can register and manage a set of prototypes in a centralized registry. Clients can request the creation of new objects by cloning the appropriate prototype from the registry, allowing for more flexibility and dynamic object creation.
+5. **Dynamic Configuration:** <br> The Prototype pattern enables dynamic configuration of objects at runtime. Instead of configuring objects manually or using external configuration files, you can use prototypes to clone pre-configured objects and customize them as needed. This approach is particularly useful when dealing with complex configuration scenarios or when configuration changes frequently.
+6. **State Restoration:** <br> Prototypes can be used for state restoration purposes. By storing snapshots of object states as prototypes, you can easily revert objects to a previous state by cloning the respective prototype. This can be valuable in scenarios where you need to roll back or undo changes made to objects.
+
+These are some common use cases of the Prototype pattern, demonstrating its flexibility and advantages in object creation and customization.
+
+</details>
+
+<details>
+	<summary> Example Code </summary>
+
+```java
+// Prototype interface
+interface Prototype {
+    Prototype clone();
+}
+
+// Concrete prototype
+class ConcretePrototype implements Prototype {
+    private String property;
+
+    public ConcretePrototype(String property) {
+        this.property = property;
+    }
+
+    @Override
+    public Prototype clone() {
+        return new ConcretePrototype(this.property);
+    }
+}
+
+// Client
+public class Client {
+    public static void main(String[] args) {
+        Prototype prototype = new ConcretePrototype("Prototype");
+        Prototype cloned = prototype.clone();
+    }
+}
+
+```
+
+</details>
+
+<details>
+	<summary> Benefits and Considerations </summary>
+
+**Benefits:**
+- Allows adding and removing products dynamically at runtime.
+- Avoids subclassing by cloning existing objects.
+- Provides a flexible and reusable way to create objects
+
+**Consideration:**
+- Deep copying might be required if the prototype contains complex nested objects.
+- Properly handling the cloning process to maintain the integrity of the cloned objects.
+
+</details>
+
+<details>
+	<summary> Implementation Steps </summary>
+
+1. Define the **Prototype** interface.
+2. Implement the **ConcretePrototype** class that implements the **Prototype** interface and provides cloning behavior.
+3. Create a **client** that uses the Prototype objects and requests cloning as needed.
+
+</details>
+
+<details>
+	<summary> Note </summary>
+
+It's important to ensure that the prototype objects are correctly cloned to avoid unintended sharing of internal states between clones.
+
+</details>
+
+<details>
+	<summary> External Links </summary>
+
+- [Refactoring Guru: Prototype](https://refactoring.guru/design-patterns/prototype)
+
+</details>
+
+
+
 
 
 
