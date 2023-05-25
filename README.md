@@ -3,7 +3,7 @@
 ## Prerequisites for Learning Design Patterns
 
 <details> 
-	<summary> toggle view/hide </summary>
+	<summary> Click Me </summary>
 To effectively learn and understand design patterns, it's helpful to have a solid foundation in programming and software development concepts. Here are some recommended prerequisites for learning design patterns:
 
 1. **Object-Oriented Programming (OOP)**: <br> Design patterns are closely tied to object-oriented principles. Familiarize yourself with concepts like classes, objects, inheritance, polymorphism, and encapsulation.
@@ -23,7 +23,7 @@ Remember that learning design patterns is an ongoing process that improves with 
 ## What is and why design pattern in software engineering?
 
 <details>
-	<summary> toggle view/hide </summary>
+	<summary> Click Me </summary>
 	
 A design pattern is a reusable solution to a commonly occurring problem in software design. It provides a structured approach to designing software systems that are flexible, maintainable, and scalable. Design patterns capture best practices and proven solutions developed and refined by experienced software developers over time.
 
@@ -44,7 +44,7 @@ By understanding and applying design patterns, software developers can create mo
 ## The Catalog of Design Patterns
 
 <details>
-	<summary> toggle view/hide </summary>
+	<summary> Click Me </summary>
 	
 We can classify the design patterns like the following catalog:
 
@@ -97,7 +97,7 @@ Each pattern in the catalog has its own unique purpose and usage, addressing spe
 ## Before You Proceed
 
 <details>
-	<summary> toggle view/hide </summary>
+	<summary> Click Me </summary>
 
 Each design pattern has 3 parts:
 1. **Intent:** <br> What does it do?
@@ -130,7 +130,7 @@ Now we will dive into the design patterns one by one. Let's start with **Creatio
 ## Creational Design Patterns
 
 <details>
-	<summary> toggle view/hide </summary>
+	<summary> Click Me </summary>
 
 Creational design patterns focus on object creation mechanisms, providing solutions to create objects in a flexible and reusable manner. They aim to decouple object creation from the client code, promoting loose coupling and enhancing the maintainability and extensibility of the codebase. 
 Here's an introduction to some common creational design patterns:
@@ -146,16 +146,122 @@ These creational design patterns address various object creation scenarios and p
 
 </details>
 
+### Singleton Pattern - A Creational Design Pattern
+
+<details>
+	<summary> Overview </summary>
+
+The Singleton pattern is a creational design pattern that ensures a class has only one instance and provides a global point of access to that instance. It is commonly used when there should be exactly one instance of a class that needs to be shared across multiple parts of the system.
+
+</details>
+
+<details>
+	<summary> Intent </summary>
+
+The Singleton pattern ensures that a class has only one instance and provides a way to access it globally.
+
+</details>
+
+<details>
+	<summary> Key Components </summary>
+
+1. **Singleton Class:** <br> The class that is designed to have only one instance. It typically provides a static method to access the instance.
+
+</details>
+
+<details>
+	<summary> UML Diagram </summary>
+
+<figure>
+    <img src="https://refactoring.guru/images/patterns/diagrams/singleton/structure-en-indexed-2x.png"
+         alt="UML Diagram, Singleton Pattern">
+    <figcaption>UML Diagram: Singleton Pattern</figcaption>
+</figure>
+
+</details>
 
 
+<details>
+	<summary> Use Cases </summary>
 
+The Singleton pattern is useful in situations where we need to ensure that there is only one instance of a class and that instance needs to be globally accessible. Here are some common use cases where the Singleton pattern can be applied:
 
+1. **Logging:** <br> In a logging system, you may want to have a single point of access to the logger instance throughout the application. The Singleton pattern ensures that the logger is instantiated only once and can be accessed globally to write log messages.
+2. **Database Connections:** <br> When managing database connections, it's often desirable to have a single instance of a connection manager that handles creating, pooling, and distributing connections. The Singleton pattern can be used to ensure that there is only one connection manager instance in the system.
+3. **Configuration Settings:** <br> In an application with global configuration settings, such as application-level properties or environment variables, the Singleton pattern can be used to provide a single access point to the configuration settings. This allows easy and consistent access to the settings from different parts of the application.
+4. **Caching:** <br> A caching system can benefit from using the Singleton pattern to ensure that there is only one cache manager instance. This allows different components of the system to use the same cache and avoid duplicate caching logic.
+5. **Thread Pools:** <br> In scenarios where you need to manage a pool of worker threads, the Singleton pattern can be used to provide a single point of access to the thread pool. This ensures that all components that require thread execution share the same pool.
+6. **GUI Components:** <br> In graphical user interface (GUI) applications, certain components such as dialog boxes or menu managers may need to be globally accessible. The Singleton pattern can be applied to ensure that there is only one instance of these components, simplifying their usage and management.
 
+It's important to note that while the Singleton pattern offers benefits in certain scenarios, it should be used judiciously. Overusing singletons can lead to tight coupling and make testing and maintenance more difficult. It's important to evaluate whether a singleton is the most appropriate design choice for your specific use case and consider other alternatives if necessary.
 
+</details>
 
+<details>
+	<summary> Example Code </summary>
 
+```java
+class Singleton {
+	private static Singleton instance;
 
+	private Singleton() {
+		// Private constructor to prevent direct instantiation
+	}
 
+	public static Singleton getInstance() {
+		if (instance == null) {
+			instance = new Singleton();
+		}
+		return instance;
+	}
+
+	// Other methods and properties of the Singleton class
+}
+
+public class Main {
+	public static void main( String[] args ) {
+		Singleton singleton = Singleton.getInstance();
+	}
+}
+```
+
+</details>
+
+<details>
+	<summary> Benefits and Considerations </summary>
+
+- Ensure that only one instance of the class exists.
+- Provides a global point of access to the instance, allowing other parts of the system to easily use and share the same instance.
+- Lazily initializes the instance only when it is first requested.
+- Can be used to manage resources that should have a single point of control, such as database connections or thread pools.
+- However, it is important to consider thread safety and potential performance impacts in multi-threaded environments.
+
+</details>
+
+<details>
+	<summary> Implementation Steps </summary>
+
+1. Create a private static member variable in the Singleton class to hold the single instance of the class.
+2. Make the constructor of the class private to prevent direct instantiation from outside the class.
+3. Create a public static method that acts as a global access point to the single instance of the class.
+4. Within the static method, check if the instance already exists. If it does, return the existing instance. If not, create a new instance and return it.
+5. Use the public static method to access the Singleton instance throughout the application.
+
+</details>
+
+<details>
+	<summary> Note </summary>
+
+The Singleton pattern is a powerful tool but should be used judiciously. Overusing singletons can lead to tight coupling and make testing and maintenance more difficult. It's important to evaluate whether a singleton is the most appropriate design choice for your specific use case.
+
+</details>
+
+<details>
+	<summary> External Links </summary>
+
+- [Refactoring Guru: Singleton](https://refactoring.guru/design-patterns/singleton)
+
+</details>
 
 
 
