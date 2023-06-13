@@ -413,6 +413,45 @@ It's important to ensure that the prototype objects are correctly cloned to avoi
 
 </details>
 
+(... More Creational Design Patterns (to be added) ...)
+
+---
+
+(... Structural Design Patterns (to be added) ...)
+
+---
+
+
+## Behavioral Design Patterns
+
+
+<details>
+	<summary> Overview </summary>
+
+Behavioral design patterns focus on the interaction and communication between objects, defining patterns that help to encapsulate and manage behavior in a flexible and reusable manner. Here's an overview of some popular behavioral design patterns:
+
+
+
+| SL | Pattern Names                       | Description                                                                                                                                                                                                                                  |
+|----|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1  | **Observer Pattern**                | Also known as the *Publish-Subscribe pattern*, it establishes a one-to-many dependency between objects. When the state of one object (the subject) changes, all its dependents (observers) are notified and updated automatically.           |
+| 2  | **Iterator Pattern**                | Provides a way to access elements of a collection sequentially without exposing its underlying representation. It defines a common interface for iterating over various types of collections.                                                |
+| 3  | **Strategy Pattern**                | Allows interchangeable algorithms to be selected at runtime. It encapsulates each algorithm separately and makes them interchangeable within a common context object.                                                                        |
+| 4  | **Command Pattern**                 | Encapsulates a request as an object, thereby decoupling the sender from the receiver. It allows requests to be parameterized, stored, and executed at different times.                                                                       |
+| 5  | **State Pattern**                   | Allows an object to alter its behavior when its internal state changes. It encapsulates different behaviors into separate state classes and delegates the behavior to the current state object.                                              |
+| 6  | **Chain of Responsibility Pattern** | Creates a chain of objects, where each object has a chance to handle a request. If the first object cannot handle the request, it passes it to the next object in the chain until the request is handled or the end of the chain is reached. |
+| 7  | **Memento Pattern**                 | Captures and externalizes an object's internal state without violating encapsulation, allowing the object to be restored to its previous state. It is often used to implement undo or rollback functionality.                                |
+| 8  | **Visitor Pattern**                 | Separates the algorithm from the objects on which it operates. It defines a new operation to be performed on the elements of an object structure without changing the classes of the elements themselves.                                    |
+| 9  | **Template Method Pattern**         | Defines the skeleton of an algorithm in a base class, with some steps implemented in the base class and others left abstract. Subclasses can override or extend the abstract steps to provide different implementations.                     |
+| 10 | **Interpreter Pattern**             | Deals with interpreting a language or expression. It defines a representation of the grammar along with an interpreter that processes the expressions and evaluates them.                                                                    |
+
+These patterns provide solutions for common behavioral design challenges and promote flexibility, maintainability, and extensibility in software systems.
+
+</details>
+
+
+
+
 
 
 
